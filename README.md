@@ -1,4 +1,4 @@
-**Path Code**  
+# Path Code  
 Path Code is an innovative learning platform that offers a book-like experience for mastering programming. Unlike traditional programming books with hard-to-read code snippets, Path Code provides clear, readable code in an interactive format. Users can run example code directly within the app, making learning more hands-on.
 
 ### Key Features:
