@@ -60,3 +60,5 @@ build/
 Thumbs.db
 
 .github
+
+src/main/java/com/r4ppz/test/
