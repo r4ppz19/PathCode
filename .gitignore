@@ -58,3 +58,5 @@ build/
 # Other
 .DS_Store
 Thumbs.db
+
+.github
