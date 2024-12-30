@@ -72,7 +72,7 @@
       </VBox>
    </children>
    <stylesheets>
+      <URL value="@../css/dynamicDesign.css" />
       <URL value="@../css/MainDesign.css" />
-      <URL value="@../css/DynamicDesign.css" />
    </stylesheets>
 </AnchorPane>
