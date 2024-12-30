@@ -20,7 +20,7 @@
             <VBox alignment="TOP_CENTER" prefHeight="500.0" prefWidth="216.0" spacing="10.0" styleClass="box">
                <children>
                   <Label styleClass="main-header" text="Path Code" />
-                  <TextField styleClass="search-box" />
+                  <TextField maxWidth="170.0" styleClass="search-box" />
                   <Pane prefHeight="7.0" prefWidth="151.0" />
                   <Label styleClass="second-header" text="Java Reference Book" />
                   <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" prefHeight="326.0" prefWidth="175.0" vbarPolicy="NEVER">
@@ -68,7 +68,7 @@
       </SplitPane>
    </children>
    <stylesheets>
-      <URL value="@../css/dynamicDesign.css" />
+      <URL value="@../css/DynamicDesign.css" />
       <URL value="@../css/MainDesign.css" />
    </stylesheets>
 </AnchorPane>
