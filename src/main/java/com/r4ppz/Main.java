@@ -22,6 +22,7 @@ public class Main extends Application{
         Scene scene = new Scene(loader.load());
         primaryStage.setScene(scene);
         primaryStage.getIcons().add(imageIcon);
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 }
