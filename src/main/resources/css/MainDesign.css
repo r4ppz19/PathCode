@@ -43,6 +43,12 @@
     -fx-font-weight: bold;
 }
 
+.third-header {
+    -fx-font-size: 13;
+    -fx-text-fill: #9E9E9E;
+    -fx-font-weight: bold;
+}
+
 .body {
     -fx-font-size: 12;
     -fx-text-fill: #9E9E9E;    

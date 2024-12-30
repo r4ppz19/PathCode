@@ -8,6 +8,8 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" styleClass="background" stylesheets="@../css/MainDesign.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
@@ -50,20 +52,99 @@
       </VBox>
       <VBox layoutX="216.0" layoutY="-1.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="-1.0">
          <children>
-            <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="502.0" prefWidth="585.0" styleClass="scrollpane">
+            <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" prefHeight="502.0" prefWidth="585.0" styleClass="scrollpane" vbarPolicy="NEVER">
                <content>
-                  <VBox prefHeight="0.0" prefWidth="0.0" styleClass="background">
-                     <children>
-                        <Label prefHeight="92.0" prefWidth="375.0" styleClass="main-header" text="Chapter One: The History and Evolution of Java" wrapText="true" />
-                        <Label prefHeight="113.0" prefWidth="543.0" styleClass="body" text="To fully understand Java, one must understand the reasons behind its creation, the forcesthat shaped it, and the legacy that it inherits. Like the successful computer languages thatcame before, Java is a blend of the best elements of its rich heritage combined with theinnovative concepts required by its unique mission. While the remaining chapters ofthis book describe the practical aspects of Java—including its syntax, key libraries, andapplications—this chapter explains how and why Java came about, what makes it soimportant, and how it has evolved over the years." wrapText="true" />
-                        <Label prefHeight="66.0" prefWidth="543.0" styleClass="body" text="Although Java has become inseparably linked with the online environment of theInternet, it is important to remember that Java is first and foremost a programminglanguage. Computer language innovation and development occurs for two fundamentalreasons:" wrapText="true" />
-                        <Label prefHeight="32.0" prefWidth="543.0" styleClass="body" text="• To adapt to changing environments and uses" wrapText="true" />
-                        <Label prefHeight="34.0" prefWidth="543.0" styleClass="body" text="• To implement refinements and improvements in the art of programming" wrapText="true" />
-                        <Label prefHeight="69.0" prefWidth="543.0" styleClass="body" text="As you will see, the development of Java was driven by both elements in nearly equalmeasure." wrapText="true" />
-                     </children>
+                  <VBox prefHeight="0.0" prefWidth="0.0" spacing="10.0" styleClass="background">
                      <padding>
                         <Insets left="20.0" right="20.0" top="20.0" />
                      </padding>
+                     <children>
+                        <Text fill="#9e9e9e" strokeType="OUTSIDE" strokeWidth="0.0" text="Introduction to Java" wrappingWidth="352.88934326171875">
+                           <font>
+                              <Font name="Segoe UI Bold" size="24.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#9e9e9e" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="second-header" text="What is Java?" wrappingWidth="352.88934326171875">
+                           <font>
+                              <Font name="Segoe UI Bold" size="24.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#9e9e9e" strokeType="OUTSIDE" strokeWidth="0.0" text="Java is a high-level, object-oriented programming language designed to be simple, secure, and portable. It was created by Sun Microsystems in 1995 and has since become one of the most widely used programming languages in the world. Java allows developers to write code once and run it anywhere, thanks to its platform-independent nature." wrappingWidth="520.0">
+                           <font>
+                              <Font name="Segoe UI" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#9e9e9e" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="second-header" text="Overview of Java as a Programming Language" wrappingWidth="352.88934326171875">
+                           <font>
+                              <Font name="Segoe UI Bold" size="24.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#9e9e9e" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="third-header" text="1. Object-Oriented" wrappingWidth="352.88934326171875">
+                           <font>
+                              <Font name="Segoe UI Bold" size="24.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#9e9e9e" strokeType="OUTSIDE" strokeWidth="0.0" text="Java organizes code into classes and objects, promoting modularity and code reuse. This approach simplifies the development of complex systems by breaking them into smaller, manageable pieces." wrappingWidth="520.0">
+                           <font>
+                              <Font name="Segoe UI" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#9e9e9e" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="third-header" text="2. Platform Independence" wrappingWidth="352.88934326171875">
+                           <font>
+                              <Font name="Segoe UI Bold" size="24.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#9e9e9e" strokeType="OUTSIDE" strokeWidth="0.0" text="Java programs run on any operating system with a Java Virtual Machine (JVM). This makes Java highly portable and suitable for cross-platform applications." wrappingWidth="520.0">
+                           <font>
+                              <Font name="Segoe UI" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#9e9e9e" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="third-header" text="3. Robust and Secure" wrappingWidth="352.88934326171875">
+                           <font>
+                              <Font name="Segoe UI Bold" size="24.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#9e9e9e" strokeType="OUTSIDE" strokeWidth="0.0" text="Java is designed to minimize errors and provide a secure environment for applications. Features like exception handling and a strict type-checking system ensure stability and reliability." wrappingWidth="520.0">
+                           <font>
+                              <Font name="Segoe UI" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#9e9e9e" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="third-header" text="4. Rich Standard Library" wrappingWidth="352.88934326171875">
+                           <font>
+                              <Font name="Segoe UI Bold" size="24.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#9e9e9e" strokeType="OUTSIDE" strokeWidth="0.0" text="Java provides a comprehensive library with tools for handling common programming tasks such as networking, file handling, and graphical user interface (GUI) creation." wrappingWidth="520.0">
+                           <font>
+                              <Font name="Segoe UI" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#9e9e9e" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="third-header" text="5. Multithreaded" wrappingWidth="352.88934326171875">
+                           <font>
+                              <Font name="Segoe UI Bold" size="24.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#9e9e9e" strokeType="OUTSIDE" strokeWidth="0.0" text="Java supports concurrent programming, allowing applications to perform multiple tasks simultaneously, which is essential for modern, responsive software." wrappingWidth="520.0">
+                           <font>
+                              <Font name="Segoe UI" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#9e9e9e" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="second-header" text="Java’s Popularity and Uses" wrappingWidth="352.88934326171875">
+                           <font>
+                              <Font name="Segoe UI Bold" size="24.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#9e9e9e" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="third-header" text="1. Popularity" wrappingWidth="352.88934326171875">
+                           <font>
+                              <Font name="Segoe UI Bold" size="24.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#9e9e9e" strokeType="OUTSIDE" strokeWidth="0.0" text="Java remains one of the top programming languages globally due to its versatility and reliability. It is widely used by developers of all skill levels and is backed by a large and active community." wrappingWidth="520.0">
+                           <font>
+                              <Font name="Segoe UI" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
                   </VBox>
                </content>
             </ScrollPane>
