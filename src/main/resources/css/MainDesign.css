@@ -83,3 +83,11 @@
 .tree-view .scroll-bar:horizontal .thumb {
     -fx-background-color: #4a4a4a;
 }
+
+.split-pane .split-pane-divider {
+    -fx-background-color: #888;  /* Set the color of the divider */
+    -fx-background-insets: 0;    /* Optional: Remove any inset if present */
+    -fx-pref-width: 1px;         /* Set the thickness of the divider (for vertical split) */
+    /* If horizontal split, use -fx-pref-height instead: */
+    /* -fx-pref-height: 5px; */
+}

@@ -2,22 +2,31 @@ package com.r4ppz.controller;
 
 import java.util.Collections;
 
+import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
+import javafx.scene.control.SplitPane;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeView;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 
 public class MainController {
+
     @FXML
     private TextFlow contentTextFlow;
+
     @FXML
     private TreeView<String> chaptersTreeView;
+
+    @FXML
+    private SplitPane mainSplitPane;
 
     @FXML
     private void initialize() {
         loadTextToTextFlow();
         loadChapterToTreeView();
+        preventResize();
+
     }
 
     private void loadTextToTextFlow() {
@@ -40,14 +49,14 @@ public class MainController {
     }
 
     public void loadChapterToTreeView() {
-        TreeItem<String> rootItem = new  TreeItem<>("Chapters");
+        TreeItem<String> rootItem = new TreeItem<>("Chapters");
         rootItem.setExpanded(true);
-        
+
         TreeItem<String> chapter1 = new TreeItem<>("Chapter 1");
         TreeItem<String> chapter2 = new TreeItem<>("Chapter 2");
         TreeItem<String> chapter3 = new TreeItem<>("Chapter 3");
         TreeItem<String> chapter4 = new TreeItem<>("Chapter 4");
-        
+
         TreeItem<String> topic1 = new TreeItem<>("What is Java");
         TreeItem<String> topic2 = new TreeItem<>("History of Java");
         TreeItem<String> topic3 = new TreeItem<>("Key Features of Java");
@@ -55,7 +64,22 @@ public class MainController {
         // Add topics to Chapter 1
         Collections.addAll(chapter1.getChildren(), topic1, topic2, topic3);
 
-        rootItem.getChildren().addAll(chapter1, chapter2, chapter3, chapter4);
+        Collections.addAll(rootItem.getChildren(), chapter1, chapter2, chapter3, chapter4);
+
         chaptersTreeView.setRoot(rootItem);
     }
+
+    private void preventResize() {
+        mainSplitPane.getDividers().get(0).positionProperty().addListener((observable, oldValue, newValue) -> {
+            if (newValue.doubleValue() < 0.3) {
+                // Ensure the divider position doesn't go below 0.2 (20%)
+                mainSplitPane.setDividerPosition(0, 0.3);
+            }
+
+            if (newValue.doubleValue() > 0.6) {
+                mainSplitPane.setDividerPosition(0, 0.6);
+            }
+        });
+    }
+    
 }
