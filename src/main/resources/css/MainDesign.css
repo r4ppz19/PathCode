@@ -1,0 +1,50 @@
+.root {
+    -fx-font-family: Segoe UI;
+}
+
+.scrollpane {
+    -fx-border-color: transparent;  /* Remove any border */
+    -fx-background-color: transparent; /* Remove the background color */
+    -fx-padding: 0;  /* Remove any padding around the ScrollPane */
+    -fx-effect: none;  /* Remove any effects like shadows */
+    -fx-focus-color: transparent;  /* Remove focus border on click */
+}
+
+.background {
+    -fx-background-color: #111316;
+}
+
+.box {
+    -fx-background-color: #111316;
+    -fx-border-width: 0.5;
+    -fx-border-color: #ffffff;
+}
+
+.search-box {
+    -fx-background-color: #111316;
+    -fx-border-width: 0.5;
+    -fx-border-color: #ffffff;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+
+    -fx-font-size: 12;
+    -fx-text-fill: #9E9E9E; 
+}
+
+.main-header {
+    -fx-font-size: 24;
+    -fx-text-fill: #9E9E9E;
+    -fx-font-weight: bold;
+}
+
+.second-header {
+    -fx-font-size: 15;
+    -fx-text-fill: #9E9E9E;
+    -fx-font-weight: bold;
+}
+
+.body {
+    -fx-font-size: 12;
+    -fx-text-fill: #9E9E9E;    
+}
+
