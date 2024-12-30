@@ -3,7 +3,7 @@ module com.r4ppz {
     requires transitive javafx.graphics;
     requires transitive javafx.controls;
 
-    opens com.r4ppz to javafx.fxml;
+    opens com.r4ppz.controller to javafx.fxml;
 
     exports com.r4ppz;
 }
