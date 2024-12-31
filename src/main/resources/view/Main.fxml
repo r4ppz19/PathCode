@@ -18,12 +18,12 @@
    <children>
       <SplitPane fx:id="mainSplitPane" dividerPositions="0.05" layoutX="71.0" layoutY="72.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <items>
-            <VBox alignment="TOP_CENTER" maxWidth="70.0" minWidth="40.0" spacing="20.0" styleClass="background">
+            <VBox alignment="TOP_CENTER" maxWidth="70.0" minWidth="40.0" prefWidth="40.0" spacing="20.0" styleClass="background">
                <children>
-                  <Button mnemonicParsing="false" onAction="#toggleFileExplorer" />
-                  <Button mnemonicParsing="false" />
-                  <Button mnemonicParsing="false" />
-                  <Button mnemonicParsing="false" />
+                  <Button minWidth="20.0" mnemonicParsing="false" onAction="#toggleChapterButton" prefHeight="0.0" prefWidth="20.0" />
+                  <Button minWidth="20.0" mnemonicParsing="false" onAction="#toggleBooksButton" prefHeight="0.0" prefWidth="20.0" />
+                  <Button minWidth="20.0" mnemonicParsing="false" onAction="#toggleSettingsButton" prefHeight="0.0" prefWidth="20.0" />
+                  <Button minWidth="20.0" mnemonicParsing="false" onAction="#toggleProfileButton" prefHeight="0.0" prefWidth="20.0" />
                </children>
                <padding>
                   <Insets bottom="30.0" top="30.0" />
