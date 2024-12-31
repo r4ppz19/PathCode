@@ -1,7 +1,6 @@
-package com.r4ppz.controller;
+package com.r4ppz.controller.helper;
 
 import javafx.geometry.Insets;
-import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
 
 public class CreatePanel {

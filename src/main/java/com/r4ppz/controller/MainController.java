@@ -2,6 +2,9 @@ package com.r4ppz.controller;
 
 import java.util.Collections;
 
+import com.r4ppz.controller.helper.CreatePanel;
+import com.r4ppz.controller.helper.TogglePanel;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.SplitPane;
 import javafx.scene.control.ToggleButton;
