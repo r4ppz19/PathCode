@@ -15,13 +15,51 @@ public class CreatePanel {
         VBox panel = new VBox();
         panel.setPadding(new Insets(10));
         panel.setAlignment(Pos.TOP_CENTER);
-        panel.getStyleClass().add("chapter-panel-vbox");
+        panel.getStyleClass().add("panel-vbox");
 
         Label label = createLabel("Chapters", "main-header");
         panel.getChildren().addAll(label);
 
         return panel;
     }
+
+    public static VBox createBooksPanel() {
+        VBox panel = new VBox();
+        panel.setPadding(new Insets(10));
+        panel.setAlignment(Pos.TOP_CENTER);
+        panel.getStyleClass().add("panel-vbox");
+
+        Label label = createLabel("Books", "main-header");
+        panel.getChildren().addAll(label);
+
+        return panel;
+    }
+
+    public static VBox createSettingsPanel() {
+        VBox panel = new VBox();
+        panel.setPadding(new Insets(10));
+        panel.setAlignment(Pos.TOP_CENTER);
+        panel.getStyleClass().add("panel-vbox");
+
+        Label label = createLabel("Settings", "main-header");
+        panel.getChildren().addAll(label);
+
+        return panel;
+    }
+
+    public static VBox createProfilePanel() {
+        VBox panel = new VBox();
+        panel.setPadding(new Insets(10));
+        panel.setAlignment(Pos.TOP_CENTER);
+        panel.getStyleClass().add("panel-vbox");
+
+        Label label = createLabel("Profile", "main-header");
+        panel.getChildren().addAll(label);
+
+        return panel;
+    }
+
+
 
     public void loadChapterToTreeView() {
         TreeItem<String> rootItem = new TreeItem<>("Chapters");

@@ -24,6 +24,9 @@ public class MainController {
     @FXML
     private void initialize() {
         chapterPanel = CreatePanel.createChapterPanel();
+        booksPanel = CreatePanel.createBooksPanel();
+        settingsPanel = CreatePanel.createSettingsPanel();
+        profilePanel = CreatePanel.createProfilePanel();
 
         loadTextToTextFlow();
     }
@@ -35,17 +38,17 @@ public class MainController {
 
     @FXML
     private void toggleBooksButton() {
-        System.out.println("Books toggled");
+        TogglePanel.togglePanel(mainSplitPane, booksPanel, 1);
     }
 
     @FXML
     private void toggleSettingsButton() {
-        System.out.println("Settings toggled");
+        TogglePanel.togglePanel(mainSplitPane, settingsPanel, 1);
     }
 
     @FXML
     private void toggleProfileButton() {
-        System.out.println("Profile toggled");
+        TogglePanel.togglePanel(mainSplitPane, profilePanel, 1);
     }
 
     private void loadTextToTextFlow() {

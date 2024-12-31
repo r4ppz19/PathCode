@@ -21,7 +21,7 @@
     -fx-fill: #9E9E9E;    
 }
 
-.chapter-panel-vbox {
+.panel-vbox {
     -fx-background-color: #111316;
 
     -fx-min-width: 200;
