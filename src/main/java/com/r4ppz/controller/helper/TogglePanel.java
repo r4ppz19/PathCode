@@ -15,4 +15,6 @@ public class TogglePanel {
             splitPane.getItems().add(index, panel);
         }
     }
+
+    
 }

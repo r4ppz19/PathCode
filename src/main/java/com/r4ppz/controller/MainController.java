@@ -33,7 +33,7 @@ public class MainController {
 
     @FXML
     private void toggleChapterButton() {
-        TogglePanel.togglePanel(mainSplitPane, chapterPanel, 1);
+        TogglePanel.togglePanel(mainSplitPane, booksPanel, 1);
     }
 
     @FXML
