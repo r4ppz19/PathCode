@@ -2,7 +2,6 @@ package com.r4ppz.controller;
 
 import java.util.Collections;
 
-import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.scene.control.SplitPane;
 import javafx.scene.control.TreeItem;
@@ -26,7 +25,7 @@ public class MainController {
         loadTextToTextFlow();
         loadChapterToTreeView();
         preventResize();
-
+        
     }
 
     private void loadTextToTextFlow() {
@@ -72,12 +71,10 @@ public class MainController {
     private void preventResize() {
         mainSplitPane.getDividers().get(0).positionProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue.doubleValue() < 0.3) {
-                // Ensure the divider position doesn't go below 0.2 (20%)
                 mainSplitPane.setDividerPosition(0, 0.3);
-            }
-
-            if (newValue.doubleValue() > 0.6) {
-                mainSplitPane.setDividerPosition(0, 0.6);
+            }            
+            if (newValue.doubleValue() > 0.4) {
+                mainSplitPane.setDividerPosition(0, 0.4);
             }
         });
     }
