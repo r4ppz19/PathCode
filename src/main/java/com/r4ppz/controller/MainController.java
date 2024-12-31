@@ -4,29 +4,34 @@ import java.util.Collections;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.SplitPane;
+import javafx.scene.control.ToggleButton;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeView;
+import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 
 public class MainController {
+    private VBox chapterBox;
 
     @FXML
     private TextFlow contentTextFlow;
-
-    @FXML
-    private TreeView<String> chaptersTreeView;
 
     @FXML
     private SplitPane mainSplitPane;
 
     @FXML
     private void initialize() {
+        chapterBox = CreatePanel.createChapterPanel();
+
         loadTextToTextFlow();
         loadChapterToTreeView();
-        preventResize();
-        
     }
+
+    @FXML
+    private void toggleFileExplorer() {
+        TogglePanel.togglePanel(mainSplitPane, chapterBox, 1);
+    }   
 
     private void loadTextToTextFlow() {
         Text whatIsJavaDeader = new Text("What is Java?\n");
@@ -65,18 +70,7 @@ public class MainController {
 
         Collections.addAll(rootItem.getChildren(), chapter1, chapter2, chapter3, chapter4);
 
-        chaptersTreeView.setRoot(rootItem);
-    }
-
-    private void preventResize() {
-        mainSplitPane.getDividers().get(0).positionProperty().addListener((observable, oldValue, newValue) -> {
-            if (newValue.doubleValue() < 0.3) {
-                mainSplitPane.setDividerPosition(0, 0.3);
-            }            
-            if (newValue.doubleValue() > 0.4) {
-                mainSplitPane.setDividerPosition(0, 0.4);
-            }
-        });
+        TreeView<String> chaptersTreeView = new TreeView<>(rootItem);
     }
     
 }
