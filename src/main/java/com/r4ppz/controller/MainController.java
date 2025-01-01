@@ -1,7 +1,7 @@
 package com.r4ppz.controller;
 
-import com.r4ppz.controller.helper.CreatePanel;
-import com.r4ppz.controller.helper.TogglePanel;
+import com.r4ppz.helper.CreatePanel;
+import com.r4ppz.helper.TogglePanel;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.SplitPane;
@@ -33,7 +33,7 @@ public class MainController {
 
     @FXML
     private void toggleChapterButton() {
-        TogglePanel.togglePanel(mainSplitPane, booksPanel, 1);
+        TogglePanel.togglePanel(mainSplitPane, chapterPanel, 1);
     }
 
     @FXML
@@ -52,22 +52,19 @@ public class MainController {
     }
 
     private void loadTextToTextFlow() {
-        Text whatIsJavaDeader = new Text("What is Java?\n");
-        whatIsJavaDeader.getStyleClass().add("header-one");
+        Text whatIsJavaHeader = new Text("What is Java?\n");
+        whatIsJavaHeader.getStyleClass().add("header-one");
 
-        Text javaDescription = new Text(
-                "Java is a popular programming language that was first introduced by Sun Microsystems in 1995. It" +
-                        " is widely used across the world for creating all kinds of applications, from mobile apps to web"
-                        +
-                        "applications, desktop programs, and even large-scale enterprise systems. Java is loved for its"
-                        +
-                        "versatility, reliability, and platform independence. Let\'s break down what makes Java special:\n\n");
+        String javaDescriptionText = "Java is a popular programming language that was first introduced by Sun Microsystems in 1995. "
+                + "It is widely used across the world for creating all kinds of applications, from mobile apps to web "
+                + "applications, desktop programs, and even large-scale enterprise systems. Java is loved for its "
+                + "versatility, reliability, and platform independence. Let's break down what makes Java special:\n\n";
+        Text javaDescription = new Text(javaDescriptionText);
         javaDescription.getStyleClass().add("body-paragraph");
 
         Text keyFeaturesOfJava = new Text("Key Features of Java\n");
         keyFeaturesOfJava.getStyleClass().add("header-two");
 
-        contentTextFlow.getChildren().addAll(whatIsJavaDeader, javaDescription, keyFeaturesOfJava);
+        contentTextFlow.getChildren().addAll(whatIsJavaHeader, javaDescription, keyFeaturesOfJava);
     }
-
 }

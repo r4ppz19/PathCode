@@ -1,4 +1,4 @@
-package com.r4ppz.controller.helper;
+package com.r4ppz.helper;
 
 import java.util.Collections;
 

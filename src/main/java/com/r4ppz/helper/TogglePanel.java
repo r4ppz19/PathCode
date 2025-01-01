@@ -1,4 +1,4 @@
-package com.r4ppz.controller.helper;
+package com.r4ppz.helper;
 
 import javafx.scene.control.SplitPane;
 import javafx.scene.layout.VBox;
