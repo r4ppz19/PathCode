@@ -7,18 +7,45 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.TextFlow?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" styleClass="background" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.r4ppz.controller.MainController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.r4ppz.controller.MainController">
    <stylesheets>
       <URL value="@../css/DynamicDesign.css" />
       <URL value="@../css/MainDesign.css" />
    </stylesheets>
    <children>
-      <SplitPane fx:id="mainSplitPane" dividerPositions="0.05" layoutX="71.0" layoutY="72.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <items>
-            <VBox alignment="TOP_CENTER" maxWidth="70.0" minWidth="40.0" prefWidth="40.0" spacing="20.0" styleClass="background">
+      <BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <SplitPane fx:id="mainSplitPane" prefHeight="200.0" prefWidth="200.0">
+               <items>
+                  <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="515.0" prefWidth="798.0">
+                     <content>
+                        <VBox prefHeight="200.0" prefWidth="100.0" styleClass="background">
+                           <children>
+                              <TextFlow fx:id="contentTextFlow" prefHeight="501.0" prefWidth="796.0" />
+                           </children>
+                           <padding>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </padding>
+                        </VBox>
+                     </content>
+                     <styleClass>
+                        <String fx:value="scrollpane" />
+                        <String fx:value="background" />
+                     </styleClass>
+                  </ScrollPane>
+               </items>
+               <styleClass>
+                  <String fx:value="background" />
+                  <String fx:value="split-pane" />
+               </styleClass>
+            </SplitPane>
+         </center>
+         <left>
+            <VBox alignment="TOP_CENTER" maxWidth="70.0" minWidth="40.0" prefWidth="40.0" spacing="20.0" style="-fx-background-color: #636363;" BorderPane.alignment="CENTER">
                <children>
                   <Button minWidth="20.0" mnemonicParsing="false" onAction="#toggleChapterButton" prefHeight="0.0" prefWidth="20.0" />
                   <Button minWidth="20.0" mnemonicParsing="false" onAction="#toggleBooksButton" prefHeight="0.0" prefWidth="20.0" />
@@ -28,28 +55,11 @@
                <padding>
                   <Insets bottom="30.0" top="30.0" />
                </padding>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
             </VBox>
-            <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="515.0" prefWidth="798.0">
-               <content>
-                  <VBox prefHeight="200.0" prefWidth="100.0" styleClass="background">
-                     <children>
-                        <TextFlow fx:id="contentTextFlow" prefHeight="501.0" prefWidth="796.0" />
-                     </children>
-                     <padding>
-                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-                     </padding>
-                  </VBox>
-               </content>
-               <styleClass>
-                  <String fx:value="scrollpane" />
-                  <String fx:value="background" />
-               </styleClass>
-            </ScrollPane>
-         </items>
-         <styleClass>
-            <String fx:value="background" />
-            <String fx:value="split-pane" />
-         </styleClass>
-      </SplitPane>
+         </left>
+      </BorderPane>
    </children>
 </AnchorPane>
