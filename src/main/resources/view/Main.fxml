@@ -50,7 +50,7 @@
          <left>
             <VBox alignment="TOP_CENTER" maxWidth="70.0" minWidth="40.0" prefWidth="40.0" spacing="20.0" style="-fx-background-color: #111316;" BorderPane.alignment="CENTER">
                <children>
-                  <Button minWidth="20.0" mnemonicParsing="false" onAction="#toggleChapterButton" prefHeight="0.0" prefWidth="20.0" />
+                  <Button minWidth="20.0" mnemonicParsing="false" onAction="#toggleChapterButton" prefHeight="0.0" prefWidth="20.0" style="-fx-background-color: #2A2C2F; -fx-border-color: #ffffff; -fx-border-width: 0.5px; -fx-background-radius: 5px; -fx-border-radius: 5px;" />
                   <Region prefHeight="200.0" prefWidth="1.0" />
                </children>
                <padding>
