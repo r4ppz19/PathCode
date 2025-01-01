@@ -1,9 +1,10 @@
 package com.r4ppz.ui;
 
+import java.util.Collections;
+
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeView;
 import javafx.scene.layout.VBox;
@@ -46,7 +47,7 @@ public class ChapterPanel extends VBox {
         TreeItem<String> chapterEleven = new TreeItem<>("Chapter Eleven");
 
         
-        chapters.getChildren().addAll(chapterOne, chapterTwo, chapterThree, chapterFour, chapterFive, chapterSix, chapterSeven, chapterEight, chapterNine, chapterTen, chapterEleven);
+        Collections.addAll(chapters.getChildren(), chapterOne, chapterTwo, chapterThree, chapterFour, chapterFive, chapterSix, chapterSeven, chapterEight, chapterNine, chapterTen, chapterEleven);
 
         TreeView<String> treeView = new TreeView<>(chapters);
         return treeView;
