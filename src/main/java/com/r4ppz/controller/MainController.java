@@ -25,7 +25,7 @@ public class MainController {
 
     @FXML
     private void toggleChapterButton() {
-        mainSplitPane.setDividerPositions(0.2);
+        mainSplitPane.setDividerPositions(0.5);
         TogglePanel.togglePanel(mainSplitPane, chapterPanel, 0);
     }
 
