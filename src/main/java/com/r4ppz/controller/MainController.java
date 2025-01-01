@@ -27,20 +27,7 @@ public class MainController {
     private void toggleChapterButton() {
         TogglePanel.togglePanel(mainSplitPane, chapterPanel, 0);
     }
-
-    @FXML
-    private void toggleBooksButton() {
-
-    }
-
-    @FXML
-    private void toggleSettingsButton() {
-    }
-
-    @FXML
-    private void toggleProfileButton() {
-    }
-
+    
     private void loadTextToTextFlow() {
         Text whatIsJavaHeader = new Text("What is Java?\n");
         whatIsJavaHeader.getStyleClass().add("header-one");

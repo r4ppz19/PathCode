@@ -48,9 +48,6 @@
             <VBox alignment="TOP_CENTER" maxWidth="70.0" minWidth="40.0" prefWidth="40.0" spacing="20.0" style="-fx-background-color: #636363;" BorderPane.alignment="CENTER">
                <children>
                   <Button minWidth="20.0" mnemonicParsing="false" onAction="#toggleChapterButton" prefHeight="0.0" prefWidth="20.0" />
-                  <Button minWidth="20.0" mnemonicParsing="false" onAction="#toggleBooksButton" prefHeight="0.0" prefWidth="20.0" />
-                  <Button minWidth="20.0" mnemonicParsing="false" onAction="#toggleSettingsButton" prefHeight="0.0" prefWidth="20.0" />
-                  <Button minWidth="20.0" mnemonicParsing="false" onAction="#toggleProfileButton" prefHeight="0.0" prefWidth="20.0" />
                </children>
                <padding>
                   <Insets bottom="30.0" top="30.0" />
