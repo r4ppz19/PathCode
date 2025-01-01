@@ -8,6 +8,8 @@
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.TextFlow?>
 
@@ -19,35 +21,37 @@
    <children>
       <BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <center>
-            <SplitPane fx:id="mainSplitPane" prefHeight="200.0" prefWidth="200.0">
-               <items>
-                  <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="515.0" prefWidth="798.0">
-                     <content>
-                        <VBox prefHeight="200.0" prefWidth="100.0" styleClass="background">
-                           <children>
-                              <TextFlow fx:id="contentTextFlow" prefHeight="501.0" prefWidth="796.0" />
-                           </children>
-                           <padding>
-                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-                           </padding>
-                        </VBox>
-                     </content>
-                     <styleClass>
-                        <String fx:value="scrollpane" />
-                        <String fx:value="background" />
-                     </styleClass>
-                  </ScrollPane>
-               </items>
-               <styleClass>
-                  <String fx:value="background" />
-                  <String fx:value="split-pane" />
-               </styleClass>
-            </SplitPane>
+            <HBox>
+               <children>
+                  <Region minWidth="1.0" prefHeight="200.0" prefWidth="10.0" style="-fx-opacity: 0.1;" />
+                  <SplitPane fx:id="mainSplitPane" prefHeight="500.0" prefWidth="826.0" styleClass="background">
+                     <items>
+                        <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="515.0" prefWidth="798.0">
+                           <content>
+                              <VBox prefHeight="200.0" prefWidth="100.0" styleClass="background">
+                                 <children>
+                                    <TextFlow fx:id="contentTextFlow" prefHeight="501.0" prefWidth="796.0" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                           <styleClass>
+                              <String fx:value="scrollpane" />
+                              <String fx:value="background" />
+                           </styleClass>
+                        </ScrollPane>
+                     </items>
+                  </SplitPane>
+               </children>
+            </HBox>
          </center>
          <left>
-            <VBox alignment="TOP_CENTER" maxWidth="70.0" minWidth="40.0" prefWidth="40.0" spacing="20.0" style="-fx-background-color: #636363;" BorderPane.alignment="CENTER">
+            <VBox alignment="TOP_CENTER" maxWidth="70.0" minWidth="40.0" prefWidth="40.0" spacing="20.0" style="-fx-background-color: #111316;" BorderPane.alignment="CENTER">
                <children>
                   <Button minWidth="20.0" mnemonicParsing="false" onAction="#toggleChapterButton" prefHeight="0.0" prefWidth="20.0" />
+                  <Region prefHeight="200.0" prefWidth="1.0" />
                </children>
                <padding>
                   <Insets bottom="30.0" top="30.0" />

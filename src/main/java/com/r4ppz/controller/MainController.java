@@ -25,9 +25,10 @@ public class MainController {
 
     @FXML
     private void toggleChapterButton() {
+        mainSplitPane.setDividerPositions(0.2);
         TogglePanel.togglePanel(mainSplitPane, chapterPanel, 0);
     }
-    
+
     private void loadTextToTextFlow() {
         Text whatIsJavaHeader = new Text("What is Java?\n");
         whatIsJavaHeader.getStyleClass().add("header-one");
