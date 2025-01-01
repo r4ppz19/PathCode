@@ -1,7 +1,7 @@
 package com.r4ppz.controller;
 
-import com.r4ppz.helper.CreatePanel;
 import com.r4ppz.helper.TogglePanel;
+import com.r4ppz.ui.ChapterPanel;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.SplitPane;
@@ -10,7 +10,7 @@ import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 
 public class MainController {
-    private VBox chapterPanel;
+    private ChapterPanel chapterPanel;
     private VBox booksPanel;
     private VBox settingsPanel;
     private VBox profilePanel;
@@ -23,32 +23,26 @@ public class MainController {
 
     @FXML
     private void initialize() {
-        chapterPanel = CreatePanel.createChapterPanel();
-        booksPanel = CreatePanel.createBooksPanel();
-        settingsPanel = CreatePanel.createSettingsPanel();
-        profilePanel = CreatePanel.createProfilePanel();
-
+        chapterPanel = new ChapterPanel();
         loadTextToTextFlow();
     }
 
     @FXML
     private void toggleChapterButton() {
-        TogglePanel.togglePanel(mainSplitPane, chapterPanel, 1);
+        TogglePanel.togglePanel(mainSplitPane, chapterPanel, 0);
     }
 
     @FXML
     private void toggleBooksButton() {
-        TogglePanel.togglePanel(mainSplitPane, booksPanel, 1);
+
     }
 
     @FXML
     private void toggleSettingsButton() {
-        TogglePanel.togglePanel(mainSplitPane, settingsPanel, 1);
     }
 
     @FXML
     private void toggleProfileButton() {
-        TogglePanel.togglePanel(mainSplitPane, profilePanel, 1);
     }
 
     private void loadTextToTextFlow() {
