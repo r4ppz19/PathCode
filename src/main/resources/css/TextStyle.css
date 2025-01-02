@@ -1,0 +1,30 @@
+.header-one {
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-fill: #ffffff;
+
+}
+
+.header-two {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+.header-three {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.header-four {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.header-five {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.paragraph {
+    -fx-font-size: 12px;
+}
