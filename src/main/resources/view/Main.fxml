@@ -23,7 +23,7 @@
          <center>
             <HBox>
                <children>
-                  <Region maxWidth="0.1" minWidth="0.1" prefWidth="0.1" />
+                  <Region maxWidth="0.5" minWidth="0.5" prefWidth="1.0" style="-fx-background-color: #1e1e1e;" />
                   <SplitPane fx:id="mainSplitPane" prefHeight="500.0" prefWidth="826.0" styleClass="background">
                      <items>
                         <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="515.0" prefWidth="798.0">
