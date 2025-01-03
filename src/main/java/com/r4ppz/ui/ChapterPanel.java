@@ -7,7 +7,7 @@ import javafx.scene.layout.VBox;
 
 public class ChapterPanel extends VBox {
 
-    public ChapterPanel() {
+    public ChapterPanel(boolean isVisibleAndManages) {
         this.setSpacing(20);
         this.setPadding(new Insets(20));
         this.setFillWidth(true);
@@ -15,8 +15,11 @@ public class ChapterPanel extends VBox {
         this.getStyleClass().add("panel-vbox");
     
         Label titleLabel = createLabel("Java Reference", "header-two");
-        Label description = createLabel("Hello I dont fucking know, Idawda wda wd awd awd aw d awd aw d awd", "description");
+        Label description = createLabel("Hello I dont fucking know", "paragraph");
         this.getChildren().addAll(titleLabel, description);
+
+        this.setVisible(isVisibleAndManages);
+        this.setManaged(isVisibleAndManages);
     }
 
     private Label createLabel(String title, String css) {

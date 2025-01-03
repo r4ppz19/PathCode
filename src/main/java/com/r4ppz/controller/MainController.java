@@ -17,16 +17,25 @@ public class MainController {
     @FXML
     private VBox rightPanelVbox;
 
+    private boolean isLeftPanelExpanded = false;
+
     @FXML
     private void initialize() {
-        chapterPanel = new ChapterPanel();
+        chapterPanel = new ChapterPanel(isLeftPanelExpanded);
         leftPanelVbox.getChildren().addAll(chapterPanel);
 
     }
 
     @FXML
     private void toggleExpandLeftPannelButton(ActionEvent actionEvent) {
-        TogglePanel.toggleLeftPanel(leftPanelVbox);
+        if (isLeftPanelExpanded) {
+            leftPanelVbox.setMinWidth(40);
+        } else {
+            leftPanelVbox.setMinWidth(300);
+        }
+        isLeftPanelExpanded = !isLeftPanelExpanded;
+        chapterPanel.setVisible(isLeftPanelExpanded);
+        chapterPanel.setManaged(isLeftPanelExpanded);
     }
 
     @FXML
