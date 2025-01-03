@@ -15,7 +15,8 @@ public class ChapterPanel extends VBox {
         this.getStyleClass().add("panel-vbox");
     
         Label titleLabel = createLabel("Java Reference", "header-two");
-        this.getChildren().addAll(titleLabel);
+        Label description = createLabel("Hello I dont fucking know, Idawda wda wd awd awd aw d awd aw d awd", "description");
+        this.getChildren().addAll(titleLabel, description);
     }
 
     private Label createLabel(String title, String css) {

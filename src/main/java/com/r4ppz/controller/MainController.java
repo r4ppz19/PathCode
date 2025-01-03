@@ -20,13 +20,13 @@ public class MainController {
     @FXML
     private void initialize() {
         chapterPanel = new ChapterPanel();
+        leftPanelVbox.getChildren().addAll(chapterPanel);
+
     }
 
     @FXML
     private void toggleExpandLeftPannelButton(ActionEvent actionEvent) {
         TogglePanel.toggleLeftPanel(leftPanelVbox);
-
-        leftPanelVbox.getChildren().addAll(chapterPanel);
     }
 
     @FXML
