@@ -23,7 +23,7 @@ public class MainController {
     private void initialize() {
         chapterPanel = new ChapterPanel(isLeftPanelExpanded);
         leftPanelVbox.getChildren().addAll(chapterPanel);
-
+        
     }
 
     @FXML

@@ -18,7 +18,7 @@ public class Main extends Application{
     @Override
     public void start(Stage primaryStage) throws Exception {
         Image imageIcon = imageLoader.loadImage("/image/main-icon.jpg");
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/MainV2.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Main.fxml"));
         Scene scene = new Scene(loader.load());
 
         primaryStage.setMinWidth(1000);
