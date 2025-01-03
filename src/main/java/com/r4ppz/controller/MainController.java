@@ -1,12 +1,15 @@
 package com.r4ppz.controller;
 
 import com.r4ppz.helper.TogglePanel;
+import com.r4ppz.ui.ChapterPanel;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.layout.VBox;
 
 public class MainController {
+
+    private ChapterPanel chapterPanel;
 
     @FXML
     private VBox leftPanelVbox;
@@ -15,8 +18,15 @@ public class MainController {
     private VBox rightPanelVbox;
 
     @FXML
+    private void initialize() {
+        chapterPanel = new ChapterPanel();
+    }
+
+    @FXML
     private void toggleExpandLeftPannelButton(ActionEvent actionEvent) {
         TogglePanel.toggleLeftPanel(leftPanelVbox);
+
+        leftPanelVbox.getChildren().addAll(chapterPanel);
     }
 
     @FXML

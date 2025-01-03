@@ -14,7 +14,7 @@ public class ChapterPanel extends VBox {
         this.setAlignment(Pos.TOP_CENTER);
         this.getStyleClass().add("panel-vbox");
     
-        Label titleLabel = createLabel("Java Reference", "second-header");
+        Label titleLabel = createLabel("Java Reference", "header-two");
         this.getChildren().addAll(titleLabel);
     }
 

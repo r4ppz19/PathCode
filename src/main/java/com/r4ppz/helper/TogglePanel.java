@@ -21,8 +21,8 @@ public class TogglePanel {
             System.out.println("Panel VBox is null");
         }
 
-        if (panelVbox.getMinWidth() != 450) {
-            panelVbox.setMinWidth(450);
+        if (panelVbox.getMinWidth() != 400) {
+            panelVbox.setMinWidth(400);
         } else {
             panelVbox.setMinWidth(40);
         }
