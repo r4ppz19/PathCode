@@ -1,5 +1,7 @@
 package com.r4ppz.controller;
 
+import com.r4ppz.helper.TogglePanel;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.layout.VBox;
@@ -10,15 +12,15 @@ public class MainController {
     private VBox leftPanelVbox;
 
     @FXML
+    private VBox rightPanelVbox;
+
+    @FXML
     private void toggleExpandLeftPannelButton(ActionEvent actionEvent) {
-        toggleLeftPanel();
+        TogglePanel.toggleLeftPanel(leftPanelVbox);
     }
 
-    private void toggleLeftPanel() {
-        if (leftPanelVbox.getMinWidth() != 300) {
-            leftPanelVbox.setMinWidth(300);
-        } else {
-            leftPanelVbox.setMinWidth(40);
-        }
+    @FXML
+    private void toggleExpandRightPannelButton() {
+        TogglePanel.toggleRightPanel(rightPanelVbox);
     }
 }

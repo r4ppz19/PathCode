@@ -21,9 +21,10 @@ public class Main extends Application{
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/MainV2.fxml"));
         Scene scene = new Scene(loader.load());
 
-        primaryStage.setMinWidth(800);
+        primaryStage.setMinWidth(1000);
         primaryStage.setMinHeight(500);
 
+        primaryStage.setTitle("Path Code");
         primaryStage.setScene(scene);
         primaryStage.getIcons().add(imageIcon);
         // primaryStage.setResizable(false);

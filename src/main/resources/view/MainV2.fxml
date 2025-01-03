@@ -47,9 +47,9 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                            <graphic>
-                              <ImageView fitHeight="205.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true">
                                  <image>
-                                    <Image url="@../image/home_50dp_E8EAED_FILL0_wght400_GRAD0_opsz48.png" />
+                                    <Image url="@../image/info_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -71,13 +71,20 @@
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/account_circle_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                   </Button>
-                  <Button layoutX="867.0" layoutY="20.0" minHeight="30.0" minWidth="20.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #22262B; -fx-background-radius: 15px;" AnchorPane.rightAnchor="213.0">
+                  <Button layoutX="815.0" layoutY="17.0" minHeight="30.0" minWidth="20.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #22262B; -fx-background-radius: 15px;" AnchorPane.rightAnchor="165.0">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button layoutX="977.0" layoutY="20.0" minHeight="30.0" minWidth="20.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #22262B; -fx-background-radius: 15px;" AnchorPane.rightAnchor="103.0">
+                  <Button layoutX="914.0" layoutY="17.0" minHeight="30.0" minWidth="20.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #22262B; -fx-background-radius: 15px;" AnchorPane.rightAnchor="66.0">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
@@ -93,12 +100,16 @@
             </StackPane>
          </center>
          <right>
-            <VBox alignment="TOP_CENTER" maxWidth="400.0" minWidth="40.0" prefWidth="40.0" spacing="20.0" style="-fx-background-color: #22262B; -fx-background-radius: 15px; -fx-border-width: 1px; -fx-border-radius: 15px;" BorderPane.alignment="CENTER">
+            <VBox fx:id="rightPanelVbox" alignment="TOP_CENTER" maxWidth="400.0" minWidth="40.0" prefWidth="40.0" spacing="20.0" style="-fx-background-color: #22262B; -fx-background-radius: 15px; -fx-border-width: 1px; -fx-border-radius: 15px;" BorderPane.alignment="CENTER">
                <padding>
                   <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
                </padding>
                <children>
-                  <Button maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" style="-fx-background-color: #333436; -fx-border-radius: 5px; -fx-background-radius: 5px;" />
+                  <AnchorPane>
+                     <children>
+                        <Button maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" onAction="#toggleExpandRightPannelButton" style="-fx-background-color: #333436; -fx-border-radius: 5px; -fx-background-radius: 5px;" AnchorPane.leftAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
                </children>
             </VBox>
          </right>

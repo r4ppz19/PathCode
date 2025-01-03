@@ -1,20 +1,31 @@
 package com.r4ppz.helper;
 
-import javafx.scene.control.SplitPane;
 import javafx.scene.layout.VBox;
 
 public class TogglePanel {
     
-    // Helper Method: Toggles the visibility of a panel in the SplitPane
-    public static void togglePanel(SplitPane splitPane, VBox panel, int index) {
-        if (splitPane.getItems().contains(panel)) {
-            // Remove the panel if it's already visible
-            splitPane.getItems().remove(panel);
+    public static void toggleLeftPanel(VBox panelVbox) {
+        if (panelVbox == null) {
+            System.out.println("Panel VBox is null");
+        }
+
+        if (panelVbox.getMinWidth() != 300) {
+            panelVbox.setMinWidth(300);
         } else {
-            // Add the panel at the appropriate position
-            splitPane.getItems().add(index, panel);
+            panelVbox.setMinWidth(40);
         }
     }
 
-    
+    public static void toggleRightPanel(VBox panelVbox) {
+        if (panelVbox == null) {
+            System.out.println("Panel VBox is null");
+        }
+
+        if (panelVbox.getMinWidth() != 450) {
+            panelVbox.setMinWidth(450);
+        } else {
+            panelVbox.setMinWidth(40);
+        }
+    }
+
 }
