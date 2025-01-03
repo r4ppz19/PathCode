@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
@@ -14,9 +15,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="550.0" prefWidth="1100.0" style="-fx-background-color: #37383B;" stylesheets="@../css/TextStyle.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.r4ppz.controller.MainController">
+<AnchorPane prefHeight="550.0" prefWidth="1100.0" style="-fx-background-color: #37383B;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.r4ppz.controller.MainController">
    <children>
-      <BorderPane layoutX="330.0" layoutY="176.0" minHeight="100.0" minWidth="100.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <BorderPane layoutX="330.0" layoutY="176.0" minHeight="100.0" minWidth="100.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="0.0">
          <left>
             <VBox fx:id="leftPanelVbox" alignment="TOP_CENTER" maxWidth="400.0" minWidth="40.0" prefWidth="40.0" spacing="20.0" style="-fx-background-color: #22262B; -fx-background-radius: 15px; -fx-border-width: 1px; -fx-border-radius: 15px;" BorderPane.alignment="CENTER">
                <BorderPane.margin>
@@ -39,26 +40,26 @@
             </VBox>
          </left>
          <top>
-            <AnchorPane minWidth="600.0" BorderPane.alignment="CENTER">
+            <AnchorPane minWidth="600.0" prefHeight="2.0" prefWidth="1060.0" BorderPane.alignment="CENTER">
                <children>
-                  <HBox minWidth="348.0" prefHeight="74.0" prefWidth="348.0" spacing="20.0">
+                  <HBox alignment="CENTER_LEFT" minWidth="348.0" prefHeight="60.0" prefWidth="348.0" spacing="15.0">
                      <children>
-                        <Button minHeight="50.0" minWidth="50.0" mnemonicParsing="false" style="-fx-background-color: #22262B; -fx-background-radius: 25px;">
+                        <Button alignment="CENTER" contentDisplay="CENTER" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="35.0" style="-fx-background-color: #22262B; -fx-background-radius: 100px;">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
                            <graphic>
-                              <ImageView cache="true" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="31.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../image/eyes1-icon.png" />
                                  </image>
-                                 <cursor>
-                                    <Cursor fx:constant="DEFAULT" />
-                                 </cursor>
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Label prefHeight="53.0" prefWidth="134.0" text="Path Code" textFill="#e6e6e6">
+                        <Label prefHeight="57.0" prefWidth="131.0" text="Path Code" textFill="#e6e6e6">
                            <font>
                               <Font name="Leelawadee UI Bold" size="24.0" />
                            </font>
@@ -71,19 +72,7 @@
                         </Label>
                      </children>
                   </HBox>
-                  <Button layoutX="1103.0" layoutY="10.0" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" style="-fx-background-color: #22262B; -fx-background-radius: 25px;" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0">
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                     <graphic>
-                        <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../image/account-icon.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Button layoutX="807.0" layoutY="15.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="73.0" style="-fx-background-color: #22262B; -fx-background-radius: 15px;" text="Info" textFill="WHITE" AnchorPane.rightAnchor="196.0">
+                  <Button layoutX="807.0" layoutY="15.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="73.0" style="-fx-background-color: #22262B; -fx-background-radius: 15px;" text="Info" textFill="WHITE" AnchorPane.rightAnchor="170.0">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
@@ -95,7 +84,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button layoutX="927.0" layoutY="15.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: #22262B; -fx-background-radius: 15px;" text="Settings" textFill="WHITE" AnchorPane.rightAnchor="76.0">
+                  <Button layoutX="927.0" layoutY="15.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: #22262B; -fx-background-radius: 15px;" text="Settings" textFill="WHITE" AnchorPane.rightAnchor="60.0">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
@@ -103,6 +92,18 @@
                         <ImageView fitHeight="25.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../image/settings-icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="1020.0" layoutY="13.0" maxHeight="35.0" maxWidth="35.0" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" style="-fx-background-color: #22262B; -fx-background-radius: 25px;" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="13.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/account-icon.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -140,7 +141,8 @@
          </right>
       </BorderPane>
    </children>
-   <padding>
-      <Insets bottom="30.0" left="20.0" right="20.0" top="20.0" />
-   </padding>
+   <stylesheets>
+      <URL value="@../css/MainViewStyle/TextStyle.css" />
+      <URL value="@../css/MainViewStyle/TextAreaStyle.css" />
+   </stylesheets>
 </AnchorPane>

@@ -1,0 +1,38 @@
+.text-area {
+    -fx-control-inner-background: #22262B; /* Background inside the text area */
+    -fx-background-color: #22262B;       /* Outer background */
+    -fx-border-radius: 0px;
+    -fx-background-radius: 0px;
+}
+
+.text-area .content {
+    -fx-background-color: #22262B;         /* Background for the text area content */
+}
+
+.text-area .scroll-pane {
+    -fx-background-color: #22262B;         /* Background for the scroll pane */
+}
+
+.text-area .scroll-bar {
+    -fx-background-color: #33373B;         /* Background for the scroll bar */
+}
+
+.text-area .scroll-bar:vertical .thumb {
+    -fx-background-color: #44484D;         /* Color of the scroll thumb */
+    -fx-background-radius: 5px;            /* Rounded corners for the scroll thumb */
+}
+
+.text-area .scroll-bar:horizontal .thumb {
+    -fx-background-color: #44484D;         /* Color of the scroll thumb */
+    -fx-background-radius: 5px;            /* Rounded corners for the scroll thumb */
+}
+
+.text-area .scroll-bar .increment-button,
+.text-area .scroll-bar .decrement-button {
+    -fx-background-color: #55595D;         /* Background for the scroll buttons */
+}
+
+.text-area .scroll-bar .increment-arrow,
+.text-area .scroll-bar .decrement-arrow {
+    -fx-background-color: #666A6D;         /* Color for the scroll arrows */
+}
