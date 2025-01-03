@@ -18,11 +18,15 @@ public class Main extends Application{
     @Override
     public void start(Stage primaryStage) throws Exception {
         Image imageIcon = imageLoader.loadImage("/image/main-icon.jpg");
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Main.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/MainV2.fxml"));
         Scene scene = new Scene(loader.load());
+
+        primaryStage.setMinWidth(800);
+        primaryStage.setMinHeight(500);
+
         primaryStage.setScene(scene);
         primaryStage.getIcons().add(imageIcon);
-        primaryStage.setResizable(false);
+        // primaryStage.setResizable(false);
         primaryStage.show();
     }
 }
