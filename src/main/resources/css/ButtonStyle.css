@@ -1,0 +1,24 @@
+/* Target the button by its ID */
+.button {
+    -fx-background-color:  #22262B; /* Green gradient */
+    -fx-text-fill: white; /* Text color */
+    -fx-font-size: 12px; /* Font size */
+    -fx-font-weight: bold; /* Bold text */
+    /* -fx-padding: 10px 20px; Padding inside the button */
+    -fx-border-radius: 10px; /* Rounded border */
+    -fx-background-radius: 10px; /* Rounded background */
+    -fx-border-color: #f1eeec; /* Border color */
+    -fx-border-width: 0.5px; /* Border thickness */
+}
+
+/* Add a hover effect */
+.button:hover {
+    -fx-background-color:  #181b1f; /* Lighter green gradient */
+    -fx-cursor: hand; /* Show hand cursor */
+}
+
+/* Add a pressed effect */
+.button:pressed {
+    -fx-background-color:  #131618; /* Darker green */
+    /* -fx-padding: 12px 22px; Adjust padding to make it look pressed */
+}

@@ -2,6 +2,7 @@ package com.r4ppz.controller;
 
 import com.r4ppz.helper.TogglePanel;
 import com.r4ppz.ui.ChapterPanel;
+import com.r4ppz.ui.CustomButton;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -10,6 +11,8 @@ import javafx.scene.layout.VBox;
 public class MainController {
 
     private ChapterPanel chapterPanel;
+
+    private CustomButton toggleCollapseLeftButton;
 
     @FXML
     private VBox leftPanelVbox;
@@ -24,6 +27,10 @@ public class MainController {
         chapterPanel = new ChapterPanel(isLeftPanelExpanded);
         leftPanelVbox.getChildren().addAll(chapterPanel);
         
+        toggleCollapseLeftButton = new CustomButton(null, isLeftPanelExpanded);
+        toggleCollapseLeftButton.setOnAction(event -> {
+            System.out.println("Hello");
+        });
     }
 
     @FXML
