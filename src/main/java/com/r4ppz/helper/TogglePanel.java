@@ -1,19 +1,24 @@
 package com.r4ppz.helper;
 
+
 import javafx.scene.layout.VBox;
 
 public class TogglePanel {
+    private static boolean isExpanded = false;
     
-    public static void toggleLeftPanel(VBox panelVbox) {
-        if (panelVbox == null) {
+    public static void toggleLeftPanel(VBox leftPanelVbox, VBox currentPanel) {
+        if (leftPanelVbox == null) {
             System.out.println("Panel VBox is null");
         }
+        currentPanel.setVisible(!isExpanded);
+        currentPanel.setManaged(!isExpanded);
 
-        if (panelVbox.getMinWidth() != 300) {
-            panelVbox.setMinWidth(300);
+        if (isExpanded) {
+            leftPanelVbox.setMinWidth(40);
         } else {
-            panelVbox.setMinWidth(40);
+            leftPanelVbox.setMinWidth(400);
         }
+        isExpanded = !isExpanded;
     }
 
     public static void toggleRightPanel(VBox panelVbox) {

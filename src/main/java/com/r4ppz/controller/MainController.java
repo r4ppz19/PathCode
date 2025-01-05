@@ -1,18 +1,18 @@
 package com.r4ppz.controller;
 
 import com.r4ppz.helper.TogglePanel;
-import com.r4ppz.ui.ChapterPanel;
 import com.r4ppz.ui.CustomButton;
+import com.r4ppz.ui.CustomVBox;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.layout.VBox;
 
 public class MainController {
 
-    private ChapterPanel chapterPanel;
-
     private CustomButton toggleCollapseLeftButton;
+    private CustomVBox fileExplorerPanelVbox;
+    private CustomVBox chapterPanelVbox;
+    private CustomVBox booksPanelVbox;
 
     @FXML
     private VBox leftPanelVbox;
@@ -20,33 +20,42 @@ public class MainController {
     @FXML
     private VBox rightPanelVbox;
 
-    private boolean isLeftPanelExpanded = false;
-
     @FXML
     private void initialize() {
-        chapterPanel = new ChapterPanel(isLeftPanelExpanded);
-        leftPanelVbox.getChildren().addAll(chapterPanel);
+        fileExplorerPanelVbox = new CustomVBox("Home", false);
+        chapterPanelVbox = new CustomVBox("Chapters", false);
+        booksPanelVbox = new CustomVBox("Favorite", false);
+
+        leftPanelVbox.getChildren().addAll(fileExplorerPanelVbox, chapterPanelVbox, booksPanelVbox);
+
+        toggleCollapseLeftButton = new CustomButton("collapse btn", false);
+    }
+
+    @FXML
+    private void toggleFileExplorerButton() {
+        TogglePanel.toggleLeftPanel(leftPanelVbox, fileExplorerPanelVbox);
+        panelVisibility(chapterPanelVbox);
+        panelVisibility(booksPanelVbox);
+    }
+
+    
+    @FXML
+    private void toggleChapterButton() {
+        TogglePanel.toggleLeftPanel(leftPanelVbox, chapterPanelVbox);
         
-        toggleCollapseLeftButton = new CustomButton(null, isLeftPanelExpanded);
-        toggleCollapseLeftButton.setOnAction(event -> {
-            System.out.println("Hello");
-        });
+        panelVisibility(fileExplorerPanelVbox);
+        panelVisibility(booksPanelVbox);
+    }
+    
+    @FXML
+    private void toggleBooksButton() {
+        TogglePanel.toggleLeftPanel(leftPanelVbox, booksPanelVbox);
+        panelVisibility(chapterPanelVbox);
+        panelVisibility(fileExplorerPanelVbox);
     }
 
-    @FXML
-    private void toggleExpandLeftPannelButton(ActionEvent actionEvent) {
-        if (isLeftPanelExpanded) {
-            leftPanelVbox.setMinWidth(40);
-        } else {
-            leftPanelVbox.setMinWidth(300);
-        }
-        isLeftPanelExpanded = !isLeftPanelExpanded;
-        chapterPanel.setVisible(isLeftPanelExpanded);
-        chapterPanel.setManaged(isLeftPanelExpanded);
-    }
-
-    @FXML
-    private void toggleExpandRightPannelButton() {
-        TogglePanel.toggleRightPanel(rightPanelVbox);
+    private void panelVisibility(VBox otherVBox) {
+        otherVBox.setVisible(false);
+        otherVBox.setManaged(false);
     }
 }
