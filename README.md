@@ -10,3 +10,5 @@ Path Code is an innovative learning platform that offers a book-like experience 
 
 ### Mission:
 Path Code is designed for learners who want a seamless, distraction-free, and interactive learning experience. It combines the depth of traditional programming books with modern features, making programming more accessible, engaging, and effective.
+
+### Still in development
